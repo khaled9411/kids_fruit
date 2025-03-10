@@ -1,0 +1,1 @@
+A:\khaled\Work\own\kids fruit\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\v3ol6n2q\obj\arm64-v8a
