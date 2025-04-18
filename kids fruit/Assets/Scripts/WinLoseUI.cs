@@ -154,7 +154,26 @@ public class WinLoseUI : MonoBehaviour
     {
         int highestUnlockedLevel = PlayerPrefs.GetInt("HighestUnlockedLevel");
         PlayerPrefs.SetString("SelectedLevelPrefab", $"Level {highestUnlockedLevel}");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
+        string prefabName = PlayerPrefs.GetString("SelectedLevelPrefab", "");
+
+        if (string.IsNullOrEmpty(prefabName))
+        {
+            Debug.LogError("The prefab name for the level has not been determined!");
+            return;
+        }
+
+        GameObject levelPrefab = Resources.Load<GameObject>("LevelPrefabs/" + prefabName);
+
+        if (levelPrefab == null)
+        {
+            SceneManager.LoadScene("MainManu");
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void LoadMainManu()

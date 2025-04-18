@@ -12,13 +12,14 @@ public class LevelSelectionManager : MonoBehaviour
 
     [Header("UI Settings")]
     [SerializeField] private Button playButton;
-    [SerializeField] private string gameplaySceneName = "LevelScene";
+    [SerializeField] private string gameplaySceneName;
 
     private int selectedLevelIndex = -1;
     private int highestUnlockedLevel = 0;
 
     private void Start()
     {
+
         LoadPlayerProgress();
         CreateLevelButtons();
         SelectLatestUnlockedLevel();
@@ -54,7 +55,7 @@ public class LevelSelectionManager : MonoBehaviour
         }
     }
 
-    private void SelectLevel(int index)
+    public void SelectLevel(int index)
     {
         if (selectedLevelIndex >= 0)
         {
@@ -69,10 +70,12 @@ public class LevelSelectionManager : MonoBehaviour
         playButton.interactable = true;
     }
 
-    private void LoadSelectedLevel()
+    public void LoadSelectedLevel()
     {
         if (selectedLevelIndex >= 0)
         {
+            playButton.interactable = false;
+
             PlayerPrefs.SetString("SelectedLevelPrefab", levels[selectedLevelIndex].levelPrefabName);
             PlayerPrefs.Save();
 
@@ -90,5 +93,10 @@ public class LevelSelectionManager : MonoBehaviour
             PlayerPrefs.SetInt("HighestUnlockedLevel", highestUnlockedLevel);
             PlayerPrefs.Save();
         }
+    }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }

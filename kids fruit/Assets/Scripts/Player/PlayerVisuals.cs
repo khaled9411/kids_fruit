@@ -38,7 +38,7 @@ public class PlayerVisuals : MonoBehaviour
 
     private void Awake()
     {
-        //InitializeVisuals();
+        InitializeVisuals();//*
         SetupParticleSystems();
     }
 

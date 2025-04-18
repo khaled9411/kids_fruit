@@ -5,9 +5,9 @@ using TMPro;
 public class CurrencyUI : MonoBehaviour
 {
     [Header("UI References")]
-    [SerializeField] private TextMeshProUGUI coinsText;
-    private TextMeshProUGUI gemsText;
-    private TextMeshProUGUI starsText;
+    [SerializeField] private Text coinsText;
+    private Text gemsText;
+    private Text starsText;
 
     private void Start()
     {

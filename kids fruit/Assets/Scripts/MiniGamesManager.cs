@@ -11,6 +11,7 @@ public class MiniGamesManager : MonoBehaviour
 
     [Header("General UI")]
     [SerializeField] private RectTransform gamePanel;
+    [SerializeField] private RectTransform gameBackground;
     [SerializeField] private TextMeshProUGUI messageText;
 
     [Header("Guessing game")]
@@ -47,7 +48,7 @@ public class MiniGamesManager : MonoBehaviour
 
     public void Start()
     {
-        gamePanel.localScale = Vector3.zero;
+        gameBackground.localScale = Vector3.zero;
         guessingGamePanel.SetActive(false);
         oneChanceGamePanel.SetActive(false);
         messageText.gameObject.SetActive(false);
@@ -154,11 +155,11 @@ public class MiniGamesManager : MonoBehaviour
         panel.SetActive(true);
 
         // Animate panel scale
-        gamePanel.localScale = Vector3.zero;
+        gameBackground.localScale = Vector3.zero;
 
         // Create a sequence for the panel animation
         Sequence panelSequence = DOTween.Sequence();
-        panelSequence.Append(gamePanel.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack));
+        panelSequence.Append(gameBackground.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack));
 
         // After panel animation, animate buttons
         panelSequence.OnComplete(() => {
@@ -429,7 +430,7 @@ public class MiniGamesManager : MonoBehaviour
         yield return closeSequence.WaitForCompletion();
 
         // Animate the panel closing
-        Tween closeTween = gamePanel.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack);
+        Tween closeTween = gameBackground.DOScale(Vector3.zero, 0.5f).SetEase(Ease.InBack);
         yield return closeTween.WaitForCompletion();
 
         // Deactivate elements after animation completes

@@ -1,0 +1,10 @@
+# ninja log v5
+0	6556	7650423625266031	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	7cd9c26308e914e7
+806	6559	7650423632796162	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	72d89c793d77ec9f
+1628	6559	7650423643163703	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	bfb76ef9ad07978a
+2436	6560	7650423649166533	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	5270bfaba30ee991
+3265	6561	7650423658856667	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	6e1da1698f6027bf
+4083	6562	7650423665515841	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	45d27b8396217eb5
+4932	6562	7650423673913975	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	40f16974604e4d1e
+5730	7273	7650423682334150	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	46e2d2a0317236a2
+7274	9064	7650423700275611	A:/khaled/Work/own/kids_fruit/kids fruit/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/263h3523/obj/armeabi-v7a/libgame.so	a9883cfca9db1ccc

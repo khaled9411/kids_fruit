@@ -55,5 +55,62 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eca7f1171d80ab44f8f12d80af63a629, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3476973591455858027}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eca7f1171d80ab44f8f12d80af63a629, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8557601293447302640}
   m_SourcePrefab: {fileID: 100100000, guid: eca7f1171d80ab44f8f12d80af63a629, type: 3}
+--- !u!1 &7085618807472253496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eca7f1171d80ab44f8f12d80af63a629, type: 3}
+  m_PrefabInstance: {fileID: 7968069585498330985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &3476973591455858027
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085618807472253496}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.7
+  m_Height: 16.019459
+  m_Direction: 0
+  m_Center: {x: -0.0514822, y: 1.6165853, z: 0}
+--- !u!136 &8557601293447302640
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085618807472253496}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.7
+  m_Height: 16.019459
+  m_Direction: 2
+  m_Center: {x: -0.0514822, y: 1.6165853, z: 0}

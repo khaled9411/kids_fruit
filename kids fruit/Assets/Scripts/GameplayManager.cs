@@ -14,7 +14,7 @@ public class GameplayManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        SpawnSelectedCharacter();
+        //SpawnSelectedCharacter();
     }
 
 

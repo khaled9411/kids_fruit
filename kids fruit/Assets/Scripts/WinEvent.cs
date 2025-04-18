@@ -7,7 +7,7 @@ public class WinEvent : MonoBehaviour
 
     public Action onPlayerWin;
 
-    [SerializeField] private GameObject dieEffect;
+    //[SerializeField] private GameObject dieEffect;
 
     private void Awake()
     {
@@ -25,6 +25,12 @@ public class WinEvent : MonoBehaviour
     {
         if(other.TryGetComponent<PlayerController>(out _))
         {
+
+            if(PlayerPrefs.GetInt("HighestUnlockedLevel") == 10)
+            {
+                PlayerPrefs.SetInt("HighestUnlockedLevel", 0);
+            }
+
             int highestUnlockedLevel = PlayerPrefs.GetInt("HighestUnlockedLevel") + 1;
             PlayerPrefs.SetInt("HighestUnlockedLevel", highestUnlockedLevel);
             PlayerPrefs.Save();

@@ -1,4 +1,6 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class LevelLoader : MonoBehaviour
 
     private void LoadAndInstantiateLevelPrefab()
     {
-        string prefabName = PlayerPrefs.GetString("SelectedLevelPrefab", "");
+        string prefabName = PlayerPrefs.GetString("SelectedLevelPrefab", "Level 1");
 
         if (string.IsNullOrEmpty(prefabName))
         {
